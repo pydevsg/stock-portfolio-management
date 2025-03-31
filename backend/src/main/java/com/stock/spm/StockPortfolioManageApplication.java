@@ -1,4 +1,5 @@
 package com.stock.spm;
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -6,7 +7,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class StockPortfolioManageApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StockPortfolioManageApplication.class, args);
+		SpringApplication app = new SpringApplication(StockPortfolioManageApplication.class);
+
+		// Custom configurations (optional)
+		app.setBannerMode(Banner.Mode.CONSOLE);
+		app.setLogStartupInfo(true);
+
+		app.run(args);
 	}
+
+//	public static void main(String[] args) {
+//		SpringApplication.run(StockPortfolioManageApplication.class, args);
+//	}
 
 }
