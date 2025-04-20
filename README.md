@@ -25,6 +25,8 @@ A full-stack application built with Angular 19 frontend and Spring Boot backend 
 - **Authentication**: JWT security (optional)
 
 ## Project Structure
+
+<pre>
 stock-portfolio-management/
 ├── backend/ # Spring Boot Application
 │ ├── src/
@@ -55,7 +57,7 @@ stock-portfolio-management/
 │ │ └── styles/ # Global styles
 │ └── angular.json # Angular config
 └── README.md # This document
-
+</pre>
 
 ## Prerequisites
 
