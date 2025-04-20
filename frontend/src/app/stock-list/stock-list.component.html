@@ -1,1 +1,36 @@
-<p>stock-list works!</p>
+<div class="stock-list-container">
+  <div class="header">
+    <h1>Stock Portfolio</h1>
+    <button mat-raised-button color="primary" (click)="openAddStockModal()">
+      Add Stock
+    </button>
+  </div>
+
+  <!-- Loading spinner (now properly imported) -->
+  <div class="loading-spinner" *ngIf="isLoading">
+    <mat-spinner diameter="40"></mat-spinner>
+    <p>Loading stock data...</p>
+  </div>
+
+  <!-- Stock cards -->
+  <div *ngIf="!isLoading" class="stock-cards">
+    <mat-card *ngFor="let stock of stocks" class="stock-card">
+      <mat-card-header>
+        <mat-card-title>{{stock.symbol}}</mat-card-title>
+        <mat-card-subtitle>
+          Quantity: {{stock.quantity}}
+          <span *ngIf="stock.price === 0"> (Loading price...)</span>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Price: {{stock.price | currency}}</p>
+        <p>Value: {{stock.price * stock.quantity | currency}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="warn" 
+                (click)="removeStock(stock.id!)"
+                *ngIf="stock.id">Remove</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
