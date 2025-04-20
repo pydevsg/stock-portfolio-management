@@ -16,8 +16,5 @@ public class StockPortfolioManageApplication {
 		app.run(args);
 	}
 
-//	public static void main(String[] args) {
-//		SpringApplication.run(StockPortfolioManageApplication.class, args);
-//	}
 
 }

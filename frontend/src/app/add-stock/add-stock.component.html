@@ -1,0 +1,6 @@
+<mat-form-field>
+    <input matInput type="number" placeholder="Price" 
+           formControlName="price" step="0.01" min="0.01" required>
+    <mat-error *ngIf="stockForm.get('price')?.hasError('required')">
+      Price is required
+    </mat-error>
