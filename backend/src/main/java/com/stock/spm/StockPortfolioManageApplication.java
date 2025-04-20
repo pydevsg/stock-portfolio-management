@@ -8,8 +8,6 @@ public class StockPortfolioManageApplication {
 
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(StockPortfolioManageApplication.class);
-
-		// Custom configurations (optional)
 		app.setBannerMode(Banner.Mode.CONSOLE);
 		app.setLogStartupInfo(true);
 
